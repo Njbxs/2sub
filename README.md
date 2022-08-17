@@ -1,19 +1,16 @@
 # NJBXS FILE WITH FORCE JOIN
 
-Bot Telegram untuk menyimpan Posting atau File yang dapat Diakses melalui Link Khusus.
-Saya Kira Ini Akan Bermanfaat Bagi Banyak Orang.. 😇.
+husus.
 
-##
 
-**Jika Anda memerlukan tambahan module lagi dalam repo atau Jika Anda menemukan bug, silahkan report ke [Lord Zelda](https://www.telegram.dog/UnrealZlda)**
 
-### Features
-- Sepenuhnya dapat dicustom.
-- Pesan sambutan & Forcesub yang dapat dicustom.
-- Lebih dari satu Posting dalam Satu Link (batch).
-- Dapat di-deploy di heroku secara langsung.
 
-### Setup
+
+
+
+
+
+
 
 - Tambahkan bot ke Channel Database dengan semua izin admin
 - Tambahkan bot ke Channel ForceSub tambahkan bot sebagai ADMIN
