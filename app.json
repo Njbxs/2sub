@@ -1,57 +1,54 @@
 {
-  "name": "NJBXS-File-Bot",
-  "description": "BOT Force Subs File Sharing Bot berguna untuk menyimpan file dan dapat diakses melalui link khusus",
+  "name": "TG File Sharing Bot",
+  "description": "file sharing bot store posts and it can access by special links",
   "keywords": [
     "telegram",
     "file",
     "sharing"
   ],
-  "repository": "https://github.com/Njbxs/NJBXS-File-Double",
-  "logo": "https://telegra.ph/file/2df3529c4b93e0516216f.jpg",
+  "repository": "https://github.com/Oura-Ubot/Oura-XFsub-Bot2",
+  "logo": "https://telegra.ph/file/16222aa1d815bc26c950f.jpg",
   "env": {
     "TG_BOT_TOKEN": {
-      "description": "Masukan Bot token, Dapatkan dari t.me/BotFather",
-      "value": ""
-    },
-    "OWNER": {
-      "description": "Masukan Username Telegram untuk Owner BOT [ Jangan Pake @ ]",
+      "description": "Your Bot token, Get it from @Botfather",
       "value": ""
     },
     "OWNER_ID": {
-      "description": "Masukan User ID Telegram untuk Owner BOT",
+      "description": "An integer of consisting of your owner ID",
+      "value": "1742722235"
+    },
+    "APP_ID":{
+      "description": "your app id, take it from my.telegram.org",
+      "value": "10171254"
+    },
+    "API_HASH":{
+      "description": "your api hash, take it from my.telegram.org",
+      "value": "1090b5b41d141da66f22126a8bbe6ed7"
+    },
+    "CHANNEL_ID":{
+      "description": "make a channel (database channel), then make the bot as admin in channel, and it's id",
       "value": ""
     },
-    "ADMINS": {
-      "description": "Masukan User ID untuk mendapatkan hak Admin BOT [Hanya dapat membuat link]",
+    "FORCE_SUB_CHANNEL1":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
       "value": ""
     },
-    "APP_ID": {
-      "description": "Dapatkan APP ID di web my.telegram.org",
+    "FORCE_SUB_CHANNEL2":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
       "value": ""
-    },
-    "API_HASH": {
-      "description": "Dapatkan API HASH di web my.telegram.org",
-      "value": ""
-    },
-    "CHANNEL_ID": {
-      "description": "Masukan ID Channel Untuk [Channel Database]",
-      "value": "-100"
-    },
-    "FORCE_SUB_CHANNEL": {
-      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
-      "value": "-100"
-    },
-    "FORCE_SUB_GROUP": {
-      "description": "Masukan ID dari Channel Atau Group Untuk Wajib Subscribenya",
-      "value": "-100"
     },
     "START_MESSAGE": {
-      "description": "Pesan /start memulai awalan ke bot, Gunakan format parsemode HTML",
-      "value": "<b>Hello {first}\n\nSaya dapat menyimpan file pribadi di Channel Tertentu dan pengguna lain dapat mengaksesnya dari link khusus.</b>"
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
     },
     "FORCE_SUB_MESSAGE": {
-      "description": "Pesan Paksa Subscribe bot, Gunakan Format parsemode HTML",
-      "value": "Hello {first}\n\n<b>Anda harus bergabung di Channel/Grup saya untuk menggunakan saya\n\nSilakan Join Ke Channel Terlebih Dahulu Dan Tekan Coba Lagi</b>"
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "𝙃𝙖𝙡𝙡𝙤 𝙎𝙖𝙮𝙖𝙣𝙜 {first}\n\n<b>𝙆𝙡𝙞𝙠 𝙅𝙤𝙞𝙣 𝙏𝙚𝙧𝙡𝙚𝙗𝙞𝙝 𝘿𝙖𝙝𝙪𝙡𝙪, 𝙎𝙪𝙥𝙖𝙮𝙖 𝙆𝙖𝙢𝙪 𝙈𝙚𝙣𝙙𝙖𝙥𝙖𝙩𝙠𝙖𝙣 𝙑𝙞𝙙𝙚𝙤 𝘼𝙩𝙖𝙪 𝙁𝙞𝙡𝙚𝙣𝙮𝙖\n\n𝙅𝙊𝙄𝙉 𝘿𝙐𝙇𝙐 𝙔𝘼 𝙎𝘼𝙔𝘼𝙉𝙂𝙆𝙐</b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "1742722235",
+      "required": false
     }
   },
   "addons": [
@@ -74,4 +71,3 @@
     }
   }
 }
-
