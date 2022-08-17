@@ -1,27 +1,28 @@
-# (©)Codexbotz
-# Recode by @UnrealZlda
-# t.me/ZeldaProjects
+#(©)Codexbotz
 
-from pyrogram.types import CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram import __version__
 from bot import Bot
-from config import CHANNEL, GROUP, OWNER
-
+from config import OWNER_ID
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
 
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text=f"<b>Tentang Bot ini :<b>\n\n• <code>Owner     :</code> @claysx\n• <code>Channel   :</code> @asupantiyang\n• <code>Group     :</code> @virtualempire\n• <code>Source    :</code> <a href='https://t.me/UnrealZlda'>Tanya ke Creator</a>",
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("ᴛᴜᴛᴜᴘ", callback_data="close")]]
-            ),
+            text = f"<b>○ Creator : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ Language : <code>Python3</code>\n○ Library : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://github.com/Oura-Ubot/Oura-XFsub-Bot1'>Click here</a>\n○ Channel : @OuraaProject\n○ Owner : @Owaitingforyou</b>",
+            disable_web_page_preview = True,
+            reply_markup = InlineKeyboardMarkup(
+                [
+                    [
+                        InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    ]
+                ]
+            )
         )
     elif data == "close":
         await query.message.delete()
         try:
             await query.message.reply_to_message.delete()
-        except BaseException:
+        except:
             pass
