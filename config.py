@@ -27,7 +27,7 @@ FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "0"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\n<b>KAMU HARUS JOIN CHANNEL DULU \n\nGRUP VIP LANGSUNG NONTON TANPA RIBET \n\nPROMO 2 GRUP 100K MEDIA RIBUAN BEBAS PILIH GRUP\n\nJOIN VIP CHAT ADMIN @AULIAXS\n\nTESTI JOIN VIP @VIPNERO\n\nPREVIEW MEDIA GRUP VIP NERO @PREVIEWMEDIAVIPNERO</b>")
+START_MSG = os.environ.get("START_MESSAGE", "𝗛𝗮𝗹𝗹𝗼 𝙎𝙖𝙮𝙖𝙣𝙜 {first}\n\n<b>𝙆𝙖𝙢𝙪 𝙃𝙖𝙧𝙪𝙨 𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝘿𝙪𝙡𝙪 𝙮𝙖𝙖 \n\n𝗠𝗮𝗹𝗲𝘀 𝗞𝗹𝗶𝗸 𝗕𝗼𝘁 𝗧𝗲𝗿𝘂𝘀 ? 𝗝𝗼𝗶𝗻 𝗚𝗿𝘂𝗽 𝗩𝗶𝗽 𝗔𝗷𝗮\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  2 𝙂𝙍𝙐𝙋 100𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  4 𝙂𝙍𝙐𝙋 190𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  5 𝙂𝙍𝙐𝙋 250𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  7 𝙂𝙍𝙐𝙋 450𝙆\n\n𝗝𝗼𝗶𝗻 𝗩𝗶𝗽 𝗖𝗵𝗮𝘁 𝗔𝗱𝗺𝗶𝗻 @AULIAXS\n\n𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙏𝙚𝙨𝙩𝙞 𝙅𝙤𝙞𝙣 𝙑𝙞𝙥 @VIPNERO\n\n𝗣𝗿𝗲𝘃𝗶𝗲𝘄 𝙈𝙚𝙙𝙞𝙖 𝗩𝗶𝗽 𝙉𝙚𝙧𝙤 @PREVIEWMEDIAVIPNERO</b>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "1554867043 1375611291").split()):
@@ -36,7 +36,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hallo {first}\n\n<b>KAMU HARUS JOIN CHANNEL DULU \n\nGRUP VIP LANGSUNG NONTON TANPA RIBET \n\nPROMO 2 GRUP 100K MEDIA RIBUAN BEBAS PILIH GRUP\n\nJOIN VIP CHAT ADMIN @AULIAXS\n\nTESTI JOIN VIP @VIPNERO\n\nPREVIEW MEDIA GRUP VIP NERO @PREVIEWMEDIAVIPNERO</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "𝗛𝗮𝗹𝗹𝗼 𝙎𝙖𝙮𝙖𝙣𝙜 {first}\n\n<b>𝙆𝙖𝙢𝙪 𝙃𝙖𝙧𝙪𝙨 𝙅𝙤𝙞𝙣 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝘿𝙪𝙡𝙪 𝙮𝙖𝙖 \n\n𝗠𝗮𝗹𝗲𝘀 𝗞𝗹𝗶𝗸 𝗕𝗼𝘁 𝗧𝗲𝗿𝘂𝘀 ? 𝗝𝗼𝗶𝗻 𝗚𝗿𝘂𝗽 𝗩𝗶𝗽 𝗔𝗷𝗮\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  2 𝙂𝙍𝙐𝙋 100𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  4 𝙂𝙍𝙐𝙋 190𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  5 𝙂𝙍𝙐𝙋 250𝙆\n\n𝗣𝗿𝗼𝗺𝗼 𝗣𝗮𝗸𝗲𝘁  7 𝙂𝙍𝙐𝙋 450𝙆\n\n𝗝𝗼𝗶𝗻 𝗩𝗶𝗽 𝗖𝗵𝗮𝘁 𝗔𝗱𝗺𝗶𝗻 @AULIAXS\n\n𝘾𝙝𝙖𝙣𝙣𝙚𝙡 𝙏𝙚𝙨𝙩𝙞 𝙅𝙤𝙞𝙣 𝙑𝙞𝙥 @VIPNERO\n\n𝗣𝗿𝗲𝘃𝗶𝗲𝘄 𝙈𝙚𝙙𝙞𝙖 𝗩𝗶𝗽 𝙉𝙚𝙧𝙤 @PREVIEWMEDIAVIPNERO</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
