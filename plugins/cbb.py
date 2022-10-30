@@ -10,12 +10,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ 𝙊𝙬𝙣𝙚𝙧 : <a href='tg://user?id={OWNER_ID}'>@𝙑𝙄𝙋 𝙉𝙀𝙍𝙊</a>\n○ 𝙂𝙧𝙪𝙥 𝙑𝙞𝙥 : <code>Https://t.me/vipnero</code>\n○ 𝙇𝙞𝙨𝙩 𝙑𝙞𝙥 : <a href='https://t.me/ListGrupVipnero'>Pyrogram asyncio {__version__}</a>\n○ Source Code : <a href='https://T.ME/CARASKIPIKLAN'>Click here</a>\n○ Channel : @Candurate\n○ Owner : @CastleVirtual</b>",
+            text = f"<b>○ Owner : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ List Grup Vip : @LISTGRUPVIPNERO\n○ Wajib Join Channel 1 : @VIDEOJAVTELEGRAM \n○ Wajib Join Channel 2 : @VIDEOBOKEPCANDU \n○ Wajib Join Channel 3 : @CASTLERATE\n○ Group : @CASTLEVIRTUAL</b",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("𝙑𝙞𝙥 𝙉𝙚𝙧𝙤", callback_data = "close")
+                        InlineKeyboardButton("🔒 Close", callback_data = "close")
                     ]
                 ]
             )
