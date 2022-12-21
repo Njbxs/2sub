@@ -27,7 +27,7 @@ FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2", "-100"))
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\n<b>Kamu Harus Masuk Channel Dulu\n\nKlik Coba Lagi Untuk Mendapatkan File Media Di Bot Ini Yaa</b>")
+START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\n<b>Anda Harus Bergabung Di Channel / Grup Saya Terlebih Dahulu\n\nSilahkan Bergabung Channel Dan Jangan Keluar Lagi Dari Channel\n\nSetelah Bergabung Langsung Klik Coba Lagi Untuk Mendapatkan Media Dari Bot Ini .. .. ..</b>")
 try:
     ADMINS=[]
     for x in (os.environ.get("ADMINS", "5458946193 1944309678 5585231960 1921712436 5474627943 5079984851 5484100662").split()):
@@ -36,7 +36,7 @@ except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
 
 #Force sub message 
-FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hallo {first}\n\n<b>Kamu Harus Masuk Channel Dulu\n\nKlik Coba Lagi Untuk Mendapatkan File Media Di Bot Ini Yaa</b>")
+FORCE_MSG = os.environ.get("FORCE_SUB_MESSAGE", "Hallo {first}\n\n<b>Anda Harus Bergabung Di Channel / Grup Saya Terlebih Dahulu\n\nSilahkan Bergabung Channel Dan Jangan Keluar Lagi Dari Channel\n\nSetelah Bergabung Langsung Klik Coba Lagi Untuk Mendapatkan Media Dari Bot Ini .. .. ..</b>")
 
 #set your Custom Caption here, Keep None for Disable Custom Caption
 CUSTOM_CAPTION = os.environ.get("CUSTOM_CAPTION", None)
