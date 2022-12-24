@@ -6,7 +6,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import FloodWait, UserIsBlocked, InputUserDeactivated
 
 from bot import Bot
-from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON
+from config import ADMINS, FORCE_MSG, START_MSG, OWNER_ID, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT
 from helper_func import subscribed, encode, decode, get_messages
 from database.sql import add_user, query_msg, full_userbase
 
@@ -57,7 +57,7 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Tungguu Duluu gaiss")
+        temp_msg = await message.reply("Media Sedang Diproses..")
         try:
             messages = await get_messages(client, ids)
         except:
@@ -78,11 +78,11 @@ async def start_command(client: Client, message: Message):
                 reply_markup = None
 
             try:
-                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = 'html', reply_markup = reply_markup)
+                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = 'html', reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(0.5)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
-                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = 'html', reply_markup = reply_markup)
+                await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = 'html', reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
             except:
                 pass
         return
@@ -90,8 +90,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(" Owner Bot", callback_data = "about"),
-                    InlineKeyboardButton(" Tutup Lagi Yaa", callback_data = "close")
+                    InlineKeyboardButton("Owner bot", callback_data = "about"),
+                    InlineKeyboardButton("Tutup", callback_data = "close")
                 ]
             ]
         )
@@ -113,15 +113,16 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="𝗠𝗮𝘀𝘂𝗸 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=client.invitelink1),
-            InlineKeyboardButton(text="𝗠𝗮𝘀𝘂𝗸 𝗖𝗵𝗮𝗻𝗻𝗲𝗹", url=client.invitelink2),
+            InlineKeyboardButton(
+                "Bergabung Channel",
+                url = client.invitelink)
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = '𝗖𝗼𝗯𝗮 𝗞𝗹𝗶𝗸 𝗟𝗮𝗴𝗶𝗶 𝗬𝗮𝗮',
+                    text = 'Coba Klik Lagi ya..',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
