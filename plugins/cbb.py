@@ -10,7 +10,7 @@ async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "about":
         await query.message.edit_text(
-            text = f"<b>○ Owner : <a href='tg://user?id={OWNER_ID}'>This Person</a>\n○ List Grup Vip : @LISTGRUPVIPNERO\n○ Wajib Join Channel 1 : @VIDEOJAVTELEGRAM \n○ Wajib Join Channel 2 : @VIDEOBOKEPCANDU \n○ Wajib Join Channel 3 : @CASTLERATE\n○ Group : @CASTLEVIRTUAL",
+            text = f"<b>○ Gamau Ribet ? : <a href='tg://user?id={OWNER_ID}'>Klik Link ?</a>\n\n○ Join Grup Vip Berbayar Nonton Tanpa Link\n\n○ Channel Testi Member Yang Sudah Join Grup Vip @TestiVipnero\n\n○ Channel  @VIDEOBOKEPCANDU\n\n○ Channel  @VIDEOJAVTELEGRAM\n\n○Group @CastleVirtual",
             disable_web_page_preview = True,
             reply_markup = InlineKeyboardMarkup(
                 [
